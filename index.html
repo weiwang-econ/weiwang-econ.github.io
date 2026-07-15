@@ -2,752 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Wei Wang">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
     <meta name="description"
           content="Wei Wang is a Ph.D. student in Agricultural, Environmental, and Development Economics at The Ohio State University.">
-
     <meta name="keywords"
           content="Wei Wang, Environmental Economics, Energy Economics, Climate Economics, International Trade, Integrated Assessment Modeling">
-
-    <meta name="author" content="Wei Wang">
-
-    <meta property="og:title"
-          content="Wei Wang | The Ohio State University">
-
+    <meta property="og:title" content="Wei Wang | The Ohio State University">
     <meta property="og:description"
           content="Research in environmental economics, energy economics, international trade, and climate policy.">
-
     <meta property="og:type" content="website">
-
-    <meta property="og:url"
-          content="https://weiwang-econ.github.io">
-
+    <meta property="og:url" content="https://weiwang-econ.github.io/">
     <title>Wei Wang | The Ohio State University</title>
-
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 100% !important;
-            max-width: none !important;
-            min-height: 100vh;
-            margin: 0 !important;
-            padding: 0 !important;
-            color: #303642;
-            background: #ffffff;
-        }
-
-        /* ========================================
-           Shared centered page width
-           ======================================== */
-
-        .nav-container,
-        header,
-        main,
-        footer {
-            width: calc(100% - 48px);
-            max-width: 1000px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        /* ========================================
-           Top navigation
-           ======================================== */
-
-        .top-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.97);
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .nav-container {
-            padding: 18px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .site-name {
-            color: #222222;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #444444;
-            font-size: 14px;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover,
-        .site-name:hover {
-            color: #2f65a7;
-        }
-
-        /* ========================================
-           Header
-           ======================================== */
-
-        header {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            padding: 45px 0 35px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 65px;
-        }
-
-        .header-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .header-content h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .header-content > p {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .header-image {
-            flex: 0 0 175px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .header-image img {
-            display: block;
-            width: 165px;
-            height: 165px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .social-links-header {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .social-links-header a {
-            text-decoration: none;
-        }
-
-        .social-links-header i {
-            margin-right: 5px;
-        }
-
-        /* ========================================
-           Main content
-           ======================================== */
-
-        main {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            padding-bottom: 45px;
-        }
-
-        section {
-            width: 100%;
-            max-width: none !important;
-            margin-top: 40px;
-        }
-
-        section:first-child {
-            margin-top: 0;
-        }
-
-        section h2 {
-            width: 100%;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        section p,
-        .paper-item p,
-        .teaching-item p {
-            max-width: 850px;
-            line-height: 1.75;
-        }
-
-        .job-market-note {
-            margin-top: 20px;
-            padding: 5px 0 5px 14px;
-            border-left: 3px solid #2f65a7;
-        }
-
-        .section-intro {
-            margin-bottom: 20px;
-        }
-
-        .paper-item {
-            margin-bottom: 30px;
-        }
-
-        .paper-item h3 {
-            max-width: 850px;
-            margin-bottom: 8px;
-            line-height: 1.55;
-        }
-
-        .paper-status {
-            margin-top: 7px;
-            font-size: 0.92em;
-            font-style: italic;
-        }
-
-        .teaching-item {
-            margin-bottom: 28px;
-        }
-
-        .teaching-item h3 {
-            margin-bottom: 6px;
-        }
-
-        .teaching-meta {
-            margin-top: 0;
-            font-style: italic;
-        }
-
-        .teaching-rating {
-            margin-top: 8px;
-        }
-
-        .contact-links a {
-            display: inline-block;
-            margin-right: 20px;
-            margin-bottom: 8px;
-        }
-
-        /* ========================================
-           Footer
-           ======================================== */
-
-        footer {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            padding-top: 20px;
-            padding-bottom: 35px;
-        }
-
-        /* ========================================
-           Tablet and mobile
-           ======================================== */
-
-        @media (max-width: 760px) {
-            .nav-container,
-            header,
-            main,
-            footer {
-                width: calc(100% - 32px);
-            }
-
-            .nav-container {
-                padding: 15px 0;
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .nav-links {
-                width: 100%;
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-
-            header {
-                padding-top: 30px;
-                padding-bottom: 25px;
-                flex-direction: column-reverse;
-                align-items: flex-start;
-                gap: 25px;
-            }
-
-            .header-image {
-                flex-basis: auto;
-                justify-content: flex-start;
-            }
-
-            .header-image img {
-                width: 125px;
-                height: 125px;
-            }
-
-            section {
-                margin-top: 32px;
-            }
-        }
-    </style>
 </head>
-
-<body id="home">
-
-    <!-- Top navigation -->
+<body>
     <nav class="top-nav">
-        <div class="nav-container">
-
-            <a class="site-name" href="#home">
-                Wei Wang
-            </a>
-
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#research">Research</a>
-                <a href="#teaching">Teaching</a>
-
-                <a href="files/Wei_Wang_CV.pdf"
-                   target="_blank"
-                   rel="noopener">
-                    CV
-                </a>
-
-                <a href="#contact">Contact</a>
-            </div>
-
+    <div class="nav-container">
+        <a class="site-name" href="index.html">Wei Wang</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="files/Wei_Wang_CV.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Main academic profile -->
-    <header>
+    <div class="page-shell">
+        <main class="content">
+            <section class="section">
+                <h1>Wei Wang</h1>
+                <p class="page-subtitle">
+                    Ph.D. Student · The Ohio State University
+                </p>
 
-        <div class="header-content">
+                <p class="lead">
+                    I am a Ph.D. student in the Department of Agricultural,
+                    Environmental, and Development Economics at The Ohio State University.
+                </p>
 
-            <h1>Wei Wang</h1>
+                <p>
+                    My research lies at the intersection of environmental and energy economics
+                    and international trade. I use forward-looking quantitative models and
+                    applied econometric methods to study climate and trade policy, the
+                    clean-energy transition, structural transformation, and household responses
+                    to environmental challenges.
+                </p>
 
-            <p>
-                Ph.D. Student · The Ohio State University
-            </p>
-
-            <div class="social-links-header">
-
-                <a href="mailto:wang.16091@osu.edu">
-                    <i class="fas fa-envelope"></i>
-                    Email
-                </a>
-
-                <a href="files/Wei_Wang_CV.pdf"
-                   target="_blank"
-                   rel="noopener">
-                    <i class="fas fa-file-alt"></i>
-                    CV
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="header-image">
-            <img src="images/profile.jpg"
-                 alt="Wei Wang">
-        </div>
-
-    </header>
-
-    <main>
-
-        <!-- About -->
-        <section id="about">
-
-            <p>
-                I am a Ph.D. student in the Department of Agricultural,
-                Environmental, and Development Economics at
-                The Ohio State University.
-            </p>
-
-            <p>
-                My research lies at the intersection of environmental and
-                energy economics, international trade, and climate economics.
-                I develop forward-looking quantitative models to study how
-                climate and trade policies shape investment, clean-energy
-                deployment, emissions, structural transformation, and welfare
-                across countries.
-            </p>
-
-            <p class="job-market-note">
-                <strong>
+                <p class="job-market-note">
                     I am on the 2026–2027 academic job market.
-                </strong>
-            </p>
-
-        </section>
-
-        <!-- Research fields -->
-        <section id="fields">
-
-            <h2>Research Fields</h2>
-
-            <p>
-                Environmental and Energy Economics · International Trade ·
-                Climate Economics
-            </p>
-
-            <p>
-                <strong>Methods:</strong>
-                Dynamic Integrated Assessment Modeling ·
-                Computational Economics ·
-                Quantitative General Equilibrium Modeling
-            </p>
-
-        </section>
-
-        <!-- Research -->
-        <section id="research">
-
-            <h2>Research</h2>
-
-            <!-- JMP -->
-            <div class="paper-item">
-
-                <h3>
-                    Dynamic Effects of Trade Policies in a Global
-                    Climate–Trade Economy
-                </h3>
-
-                <p>
-                    <strong>Job Market Paper</strong>
                 </p>
+            </section>
 
-                <p>
-                    This paper develops a forward-looking, multi-region
-                    climate–trade model with bilateral trade, endogenous
-                    investment, clean and dirty energy capacity, climate
-                    policy, and climate–economy feedbacks. I use the model
-                    to study how trade policies reshape the clean-energy
-                    transition, emissions, climate outcomes, and welfare
-                    over time.
+            <section class="section">
+                <h2 class="section-title">Research Fields</h2>
+                <p class="fields-line">
+                    Environmental and Energy Economics · International Trade · Climate Economics
                 </p>
-
-                <p class="paper-status">
-                    Draft and updated abstract coming soon.
+                <p class="fields-line">
+                    <strong>Methods:</strong>
+                    Dynamic Integrated Assessment Modeling · Quantitative General Equilibrium Modeling ·
+                    Applied Econometrics
                 </p>
-
-            </div>
-
-            <h2>Working Papers</h2>
-
-            <!-- CBAM working paper -->
-            <div class="paper-item">
-
-                <h3>
-                    The Long-term Effects of the EU Carbon Border
-                    Adjustment Mechanism
-                </h3>
-
-                <p>
-                    With Yongyang Cai.
-                </p>
-
-                <p>
-                    This paper develops a dynamic spatial integrated
-                    assessment model with forward-looking investment,
-                    sector-level bilateral trade, endogenous climate
-                    dynamics, and climate–economy feedbacks to evaluate
-                    the long-run effects of the European Union’s Carbon
-                    Border Adjustment Mechanism. The analysis examines
-                    how endogenous capital adjustment and broader policy
-                    coverage affect emissions, structural transformation,
-                    and welfare across developed and developing regions.
-                </p>
-
-            </div>
-
-            <div class="paper-item">
-
-                <h3>
-                    Rising Temperatures, Structural Transformation, and
-                    Within-Country Wage Inequality
-                </h3>
-
-                <p>
-                    This paper examines how rising temperatures affect the
-                    skill premium through changes in sectoral employment and
-                    structural transformation. It combines individual-level
-                    panel data from China with county-level meteorological
-                    data.
-                </p>
-
-            </div>
-
-            <div class="paper-item">
-
-                <h3>
-                    Throw a Bunch Away: A Bundled Utility Maximization
-                    Framework Modeling Multiple-Item Food Discarding
-                </h3>
-
-                <p>
-                    With Wuyang Hu, Xiaolei Li, Jian Li, and Ping Qing.
-                </p>
-
-                <p>
-                    This paper develops and empirically tests a bundled
-                    utility maximization framework for understanding
-                    interdependent household decisions to discard multiple
-                    near-expiration food items.
-                </p>
-
-            </div>
-
-            <h2>Publications and Accepted Papers</h2>
-
-            <div class="paper-item">
-
-                <p>
-                    “Expanding Firms’ Innovation Boundaries: The Role of
-                    Suppliers’ Breakthrough Green Innovation and
-                    Digitalization,” with Mingming Zhao, Fuxiang Wu, and
-                    Xia Xu.
-                    <em>
-                        IEEE Transactions on Engineering Management
-                    </em>,
-                    accepted.
-                </p>
-
-            </div>
-
-            <div class="paper-item">
-
-                <p>
-                    “Evaluating the Optimal Air Pollution Reduction Rate:
-                    Evidence from the Transmission Mechanism of Air Pollution
-                    Effects on Public Subjective Well-Being,” with Chuanwang
-                    Sun, Xiangyu Yi, Tiemeng Ma, and Weiyi Cai.
-                    <em>Energy Policy</em>, 2022.
-                </p>
-
-            </div>
-
-            <h2>Work in Progress</h2>
-
-            <div class="paper-item">
-
-                <h3>
-                    Non-Cooperative Climate Policy in a Dynamic Trade IAM
-                </h3>
-
-                <p>
-                    With Yongyang Cai.
-                </p>
-
-                <p>
-                    This project develops an algorithm for solving
-                    non-cooperative climate policies in dynamic,
-                    multi-region integrated assessment models with bilateral
-                    trade and forward-looking investment.
-                </p>
-
-            </div>
-
-            <div class="paper-item">
-
-                <h3>
-                    Capital Flows and Optimal Climate Policies
-                </h3>
-
-                <p>
-                    With Jingke Wu, Xufeng Liu, and Yongyang Cai.
-                </p>
-
-                <p>
-                    This project studies how international capital flows,
-                    clean and dirty energy investment, and technology
-                    spillovers affect optimal climate policy across developed
-                    and developing regions.
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- Teaching -->
-        <section id="teaching">
-
-            <h2>Teaching</h2>
-
-            <div class="teaching-item">
-
-                <h3>
-                    Advanced Quantitative Methods I and II
-                </h3>
-
-                <p class="teaching-meta">
-                    Lab Instructor, The Ohio State University,
-                    Autumn 2025
-                </p>
-
-                <p>
-                    Led doctoral-level laboratory sessions on linear and
-                    nonlinear optimization, dynamic stochastic programming,
-                    and MATLAB applications.
-                </p>
-
-                <p class="teaching-rating">
-                    <strong>Average student evaluation:</strong>
-                    4.9/5 across two doctoral-level courses.
-                </p>
-
-            </div>
-
-            <div class="teaching-item">
-
-                <h3>
-                    Principles of Food and Resource Microeconomics
-                </h3>
-
-                <p class="teaching-meta">
-                    Teaching Assistant, The Ohio State University,
-                    Spring 2026
-                </p>
-
-                <p>
-                    Assisted with grading and course support for an
-                    undergraduate course in microeconomics and resource
-                    economics.
-                </p>
-
-            </div>
-
-            <div class="teaching-item">
-
-                <h3>
-                    Energy, the Environment, and the Economy
-                </h3>
-
-                <p class="teaching-meta">
-                    Teaching Assistant, The Ohio State University,
-                    Spring 2025
-                </p>
-
-                <p>
-                    Assisted with grading and course support for an
-                    undergraduate course in energy and environmental
-                    economics.
-                </p>
-
-            </div>
-
-        </section>
-
-        <!-- Conference and workshop presentations -->
-        <section id="presentations">
-
-            <h2>Conference and Workshop Presentations</h2>
-
-            <div class="paper-item">
-                <p>
-                    <strong>AAEA Annual Meeting</strong>,
-                    Kansas City, MO, 2026 (scheduled).
-                </p>
-            </div>
-
-            <div class="paper-item">
-                <p>
-                    <strong>AERE@WEAI</strong>,
-                    Denver, CO, 2026.
-                </p>
-            </div>
-
-            <div class="paper-item">
-                <p>
-                    <strong>
-                        Berkeley/Sloan Summer School in Environmental
-                        and Energy Economics
-                    </strong>,
-                    2025.
-                </p>
-            </div>
-
-            <div class="paper-item">
-                <p>
-                    <strong>
-                        Southern Agricultural Economics Association
-                        Annual Meeting
-                    </strong>,
-                    2025.
-                </p>
-            </div>
-
-            <div class="paper-item">
-                <p>
-                    <strong>NAREA Scholars’ Circle</strong>,
-                    2024.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-
-            <h2>Contact</h2>
-
-            <p>
-                Department of Agricultural, Environmental, and Development
-                Economics<br>
-                The Ohio State University<br>
-                2120 Fyffe Road<br>
-                Columbus, OH 43210
-            </p>
-
-            <p class="contact-links">
-
-                <a href="mailto:wang.16091@osu.edu">
-                    <i class="fas fa-envelope"></i>
-                    wang.16091@osu.edu
-                </a>
-
-                <a href="files/Wei_Wang_CV.pdf"
-                   target="_blank"
-                   rel="noopener">
-                    <i class="fas fa-file-alt"></i>
-                    Curriculum Vitae
-                </a>
-
-            </p>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Last updated July 2026.</p>
-    </footer>
-
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Job Market Paper</h2>
+                <div class="paper">
+                    <h3>Dynamic Effects of Trade Policies in a Global Climate–Trade Economy</h3>
+                    <p>
+                        This paper develops a forward-looking, multi-region climate–trade model
+                        with bilateral trade, endogenous investment, clean and dirty energy
+                        capacity, climate policy, and climate–economy feedbacks. I use the model
+                        to study how trade policies reshape the clean-energy transition,
+                        emissions, climate outcomes, and welfare over time.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="profile-card">
+    <img class="profile-photo" src="images/profile.jpg" alt="Wei Wang">
+    <div class="profile-contact">
+        <a href="mailto:wang.16091@osu.edu">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>wang.16091@osu.edu</span>
+        </a>
+        <a href="files/Wei_Wang_CV.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-file-alt" aria-hidden="true"></i>
+            <span>Curriculum Vitae</span>
+        </a>
+        <span>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span>Columbus, Ohio</span>
+        </span>
+    </div>
+</aside>
+    </div>
+
+    <footer class="footer">
+    Last updated July 2026.
+</footer>
 </body>
 </html>
