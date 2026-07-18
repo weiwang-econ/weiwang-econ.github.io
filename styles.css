@@ -403,3 +403,44 @@ h1 {
     margin-bottom: 0;
 }
 
+/* Compact two-column fields and separate Methods section on Home */
+.home-fields-section,
+.home-methods-section {
+    margin-top: 30px;
+}
+
+.fields-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+}
+
+.field-column .field-subtitle {
+    margin: 0 0 8px;
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 34px;
+    row-gap: 5px;
+    margin: 8px 0 0;
+    padding-left: 23px;
+}
+
+.method-grid li {
+    padding-right: 8px;
+}
+
+@media (max-width: 700px) {
+    .fields-columns,
+    .method-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .fields-columns {
+        gap: 22px;
+    }
+}
+
