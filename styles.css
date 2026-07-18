@@ -421,18 +421,14 @@ h1 {
 
 .methods-columns {
     display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.85fr);
-    column-gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
     align-items: start;
 }
 
-.method-column .field-subtitle {
-    margin: 0 0 8px;
-}
-
 .method-list {
-    margin-top: 8px;
-    padding-left: 20px;
+    margin: 8px 0 0;
+    padding-left: 23px;
 }
 
 .method-list li {
