@@ -419,22 +419,35 @@ h1 {
     margin: 0 0 8px;
 }
 
-.method-grid {
+.methods-columns {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 34px;
-    row-gap: 5px;
-    margin: 8px 0 0;
-    padding-left: 23px;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.85fr);
+    column-gap: 18px;
+    align-items: start;
 }
 
-.method-grid li {
-    padding-right: 8px;
+.method-column .field-subtitle {
+    margin: 0 0 8px;
+}
+
+.method-list {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.method-list li {
+    margin-bottom: 5px;
+}
+
+@media (min-width: 701px) {
+    .method-list li {
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 700px) {
     .fields-columns,
-    .method-grid {
+    .methods-columns {
         grid-template-columns: 1fr;
         gap: 8px;
     }
