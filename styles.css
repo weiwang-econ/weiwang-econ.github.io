@@ -88,7 +88,7 @@ a:focus {
     margin: 0 auto;
     padding: 48px 0 64px;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 215px;
+    grid-template-columns: minmax(0, 1fr) 260px;
     gap: 64px;
     align-items: start;
 }
@@ -106,10 +106,10 @@ a:focus {
 
 .profile-photo {
     display: block;
-    width: 178px;
-    height: 178px;
+    width: 230px;
+    height: 230px;
     margin: 0 auto 19px;
-    border-radius: 50%;
+    border-radius: 5px;
     object-fit: cover;
     border: 1px solid #dce2e8;
 }
@@ -316,12 +316,90 @@ h1 {
     }
 
     .profile-photo {
-        width: 140px;
-        height: 140px;
+        width: 180px;
+        height: 180px;
         margin: 0 0 16px;
+        border-radius: 5px;
     }
 
     h1 {
         font-size: 31px;
     }
 }
+
+/* Compact bullet-style research fields */
+.field-subtitle {
+    margin: 25px 0 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.field-list {
+    margin: 8px 0 0;
+    padding-left: 23px;
+}
+
+.field-list li {
+    margin-bottom: 5px;
+}
+
+/* Collapsible abstracts, project summaries, and student feedback */
+.content-toggle {
+    margin-top: 10px;
+}
+
+.content-toggle summary {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    color: var(--accent);
+    background: #ffffff;
+    border: 1px solid #cfd9e6;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.content-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.content-toggle summary:hover,
+.content-toggle summary:focus,
+.content-toggle[open] summary {
+    background: #f5f8fc;
+    text-decoration: none;
+}
+
+.toggle-content {
+    margin-top: 14px;
+    padding-left: 14px;
+    border-left: 2px solid var(--line);
+}
+
+.toggle-content p:first-child {
+    margin-top: 0;
+}
+
+.toggle-content p:last-child {
+    margin-bottom: 0;
+}
+
+.feedback-content blockquote {
+    margin: 14px 0;
+    padding-left: 14px;
+    color: #46525d;
+    border-left: 3px solid #d6e0ec;
+    font-style: italic;
+}
+
+.feedback-content blockquote:first-child {
+    margin-top: 0;
+}
+
+.feedback-content blockquote:last-child {
+    margin-bottom: 0;
+}
+
